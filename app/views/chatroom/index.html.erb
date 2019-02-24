@@ -10,34 +10,15 @@
         <div class="content">
           <div class="ui small feed">
             <h4 class="ui header">Message feed</h4>
-            <div class="event">
-              <div class="content">
-                <div class="summary">
-                   <a>Elliot Fu</a> added Jenny Hess as a friend
+            <% @messages.each do |message| %>
+              <div class="event">
+                <div class="content">
+                  <div class="summary">
+                     <%= link_to message.user.username, user_path(message.user) %> <%= message.body %>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="event">
-              <div class="content">
-                <div class="summary">
-                   <a>Stevie Feliciano</a> added Elliot Fu as a friend
-                </div>
-              </div>
-            </div>
-            <div class="event">
-              <div class="content">
-                <div class="summary">
-                   <a>Helen Troy</a> added Christian Rocha as a friend
-                </div>
-              </div>
-            </div>
-            <div class="event">
-              <div class="content">
-                <div class="summary">
-                   <a>Christian Rocha</a> signed up for the  site.
-                </div>
-              </div>
-            </div>
+            <% end %>
           </div>
         </div>
       </div>
