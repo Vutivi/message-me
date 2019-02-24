@@ -8,3 +8,5 @@
 User.create(username: "Vutivi", password: "password")
 User.create(username: "Vangame", password: "password")
 User.create(username: "Ntlakuko", password: "password")
+
+Message.create(body: "What's on your mind guys?", user_id: 1)
