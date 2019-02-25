@@ -7,7 +7,7 @@
         Account <i class="dropdown icon"></i>
         <div class="menu">
           <% if logged_in? %>
-            <%= link_to "Sign out #{current_user.username}", sign_out_path, class: "item" %>
+            <%= link_to "Sign out #{current_user.username}", sign_out_path, :method => :delete, class: "item" %>
           <% else %>
             <%= link_to "Sign in", sign_in_path, class: "item" %>
           <% end %>

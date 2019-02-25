@@ -1,7 +1,7 @@
 class SessionController < ApplicationController
   def new
     if logged_in?
-      flash[:success] = "Already signed in!"
+      flash[:positive] = "Already signed in!"
       redirect_to root_path
     else
       @user = User.new
@@ -13,17 +13,17 @@ class SessionController < ApplicationController
 
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
-      flash[:success]   = "You have been succesfully logged in!"
+      flash[:positive]   = "You have been succesfully signed in!"
       redirect_to root_path
     else
-      flash.now[:danger] = "Wrong username/password!"
+      flash.now[:negative] = "Wrong username/password!"
       render :new
     end
   end
 
   def destroy
     session[:user_id] = nil
-    flash[:success]   = "succesfully signed out!"
-    redirect_to root_path
+    flash[:positive]   = "succesfully signed out!"
+    redirect_to sign_in_path
   end
 end
