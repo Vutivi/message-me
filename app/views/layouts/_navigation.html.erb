@@ -15,7 +15,7 @@
       </div>
       <div class="item">
         <% unless logged_in? %>
-          <div class="ui primary button">Sign Up</div>
+          <%= link_to "Sign up", sign_up_path, class: "ui primary button" %>
         <% end %>
       </div>
     </div>
