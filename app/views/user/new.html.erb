@@ -7,15 +7,15 @@
 <div class="ui placeholder segment">
   <div class="ui two column very relaxed stackable grid">
     <div class="column">
-      <%= form_for(:user, :html => {class: "ui form", role: "form"}, url: sign_up_path) do |f| %>
-        <div class="field">
+      <%= form_for(:user, :html => {class: "ui form",id:"signup_form", role: "form"}, url: sign_up_path) do |f| %>
+        <div class="required field">
           <%= f.label :username %>
           <div class="ui left icon input">
             <%= f.text_field :username, placeholder: "Username" %>
             <i class="user teal icon"></i>
           </div>
         </div>
-        <div class="field">
+        <div class="required field">
           <%= f.label :password %>
           <div class="ui left icon input">
             <%= f.password_field :password, placeholder: "Password" %>
@@ -23,7 +23,7 @@
           </div>
         </div>
 
-        <div class="field">
+        <div class="required field">
           <%= f.label :confirm_password %>
           <div class="ui left icon input">
             <%= f.password_field :confirm_password, placeholder: "confirm password" %>
