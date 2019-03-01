@@ -3,3 +3,13 @@
 .chatbox{
   height: 380px;
 }
+
+#messages{
+  overflow: auto;
+}
+
+.input{
+  button{
+    display: none
+  }
+}

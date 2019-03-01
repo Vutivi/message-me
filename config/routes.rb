@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   delete   'sign_out', to: 'session#destroy'
   post     'message',  to: 'messages#create'
   root to: 'chatroom#index'
+
+  mount ActionCable.server, at: '/cable'
 end
