@@ -1,24 +1,15 @@
-# README
+# Message me app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a message me real chat app that uses rails action cable with redis for data store.
 
-Things you may want to cover:
+# Setup locally
 
-* Ruby version
+ * git clone https://github.com/Vutivi/message-me.git
+ * cd message-me
+ * bundle install
+ * rake db:create:all
+ * rake db:migrate
+ * rails s
+ * navigate to localhost:3000 and start chatting
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*** The app is available to chat remotely on https://messageme-chatroom.herokuapp.com/ *** 
