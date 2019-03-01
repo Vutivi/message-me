@@ -12,4 +12,4 @@ This is a message me real chat app that uses rails action cable with redis for d
  * rails s
  * navigate to localhost:3000 and start chatting
 
-*** The app is available to chat remotely on https://messageme-chatroom.herokuapp.com/ *** 
+The app is available to chat remotely on https://messageme-chatroom.herokuapp.com/
