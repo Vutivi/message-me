@@ -1,6 +1,6 @@
 # Message me app
 
-This is a message me real chat app that uses rails action cable with redis for data store.
+This is a message me realtime chat app that uses rails action cable with redis for data store.
 
 # Setup locally
 
